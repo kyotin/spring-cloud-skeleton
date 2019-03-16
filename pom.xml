@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.fsf</groupId>
-    <artifactId>training</artifactId>
+    <groupId>com.kyotin</groupId>
+    <artifactId>spring-cloud-skeleton</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -14,7 +14,7 @@
         <version>2.0.0.RELEASE</version>
     </parent>
 
-    <name>training</name>
+    <name>spring-cloud-skeleton</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -30,6 +30,9 @@
     </dependencies>
 
     <modules>
+        <module>gateway</module>
+        <module>eureka</module>
+        <module>uaa</module>
         <module>webapp</module>
         <module>core</module>
         <module>service</module>
