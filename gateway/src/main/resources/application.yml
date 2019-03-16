@@ -1,0 +1,42 @@
+server:
+  port: ${vcap.application.port:8762}
+
+ribbon:
+  eureka:
+    enabled: true
+    ConnectTimeout: 3000
+    ReadTimeout: 60000
+
+management:
+  endpoint:
+    health:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+spring:
+  application:
+    name: ge-takt-service-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+              - OPTIONS
+              - HEAD
+              - GET
+              - PUT
+              - POST
+              - DELETE
+              - PATCH
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}

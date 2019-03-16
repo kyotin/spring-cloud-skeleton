@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+      name: ge-takt-uaa
+      uri: ${vcap.services.ge-takt-system-info.credentials.gateway.uri:http://localhost:8762/api/config}
