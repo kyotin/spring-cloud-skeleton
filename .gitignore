@@ -1,8 +1,5 @@
 .idea/
-core/core.iml
-service/target/
-webapp/target/
+target/
+common/common.iml
 service/service.iml
 webapp/webapp.iml
-training.iml
-core/target/

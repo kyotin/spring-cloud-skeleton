@@ -1,4 +1,4 @@
-package com.fsf.service;
+package com.example.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
