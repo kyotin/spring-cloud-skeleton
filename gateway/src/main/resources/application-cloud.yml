@@ -1,0 +1,18 @@
+eureka:
+  instance:
+    hostname: ${vcap.application.application_uris[0]}
+    instance-id: ${spring.application.name}:${random.int}
+    secure-port: 443
+    non-secure-port: 443
+    secure-port-enabled: true
+    non-secure-port-enabled: false
+    prefer-ip-address: false
+    leaseRenewalIntervalInSeconds: 10
+    home-page-url: https://${eureka.instance.hostname}:${eureka.instance.secure-port}
+    secure-virtual-host-name: https://${vcap.application.application_uris[0]}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 10
+    serviceUrl:
+      defaultZone: ${vcap.services.ge-takt-system-info.credentials.registry.uri}/eureka

@@ -1,0 +1,19 @@
+#JDBC Settings (change connection string if different db)
+spring:
+  datasource:
+    #    url: jdbc:postgresql://localhost:5432/ge_takt_db
+    #    username: postgres
+    #    password: postgres
+    url: jdbc:postgresql://taktdemo.xyz:5432/postgres
+    username: postgres
+    password: mysecretpassword
+
+eureka:
+  instance:
+    hostname: localhost
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
