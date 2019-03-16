@@ -1,0 +1,9 @@
+pom.xml
+.idea/
+core/core.iml
+service/target/
+webapp/target/
+service/service.iml
+webapp/webapp.iml
+training.iml
+core/target/
