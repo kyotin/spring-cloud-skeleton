@@ -1,4 +1,4 @@
-package com.fsf.webapp;
+package com.example.webapp;
 
 
 import org.junit.Test;
