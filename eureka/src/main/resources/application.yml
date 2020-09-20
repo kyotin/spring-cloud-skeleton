@@ -1,8 +1,8 @@
 spring:
   profiles:
-    active: ${SPRING_PROFILES_ACTIVE:local}
+    active: local
 server:
-  port: ${vcap.application.port:8761} # Indicate the default PORT where this service will be started
+  port: 8761 # Indicate the default PORT where this service will be started
 
 eureka:
   instance:
@@ -11,6 +11,6 @@ eureka:
     registerWithEureka: false # telling the server not to register himself in the service
     fetchRegistry: false
     serviceUrl:
-      defaultZone: ${vcap.services.ge-takt-system-info.credentials.registry.uri:http://localhost:8761}/eureka/
+      defaultZone: http://localhost:8761}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 0
